@@ -1,0 +1,13 @@
+[user]
+	name = m-kawasaki-qwt
+	email = m-kawasaki@qwintet.com\n
+[color]
+		ui = true
+		diff = auto
+		status = auto
+		branch = auto
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[push]
+	default = simple
+
