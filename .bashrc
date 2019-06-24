@@ -12,7 +12,8 @@ fi
 
 umask 0002
 
-alias glog='git log'
+alias gl='git log'
+alias gln='git log --name-only'
 alias glogp='git log -p'
 alias ga='git add .'
 alias gc='git commit -m '
@@ -20,4 +21,5 @@ alias gs='git status'
 alias gd='git diff'
 alias gaddw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero;git checkout .'
 alias ggraph='git log --oneline --graph --all'
+alias gdh='git diff HEAD'
 
