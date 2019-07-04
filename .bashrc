@@ -12,14 +12,20 @@ fi
 
 umask 0002
 
-alias gl='git log'
-alias gln='git log --name-only'
+" linux 
+alias l='ls -l'
+alias la='ls -la'
+alias ls='ls -ls'
+alias lsa='ls -lsa'
+
+# git
+alias glog='git log'
 alias glogp='git log -p'
 alias ga='git add .'
-alias gc='git commit -m '
+alias gm='git commit -m '
 alias gs='git status'
 alias gd='git diff'
+alias gh='git checkout'
+alias gb='git branch'
 alias gaddw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero;git checkout .'
 alias ggraph='git log --oneline --graph --all'
-alias gdh='git diff HEAD'
-

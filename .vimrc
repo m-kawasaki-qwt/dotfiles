@@ -63,23 +63,13 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-noremap! <C-?> <C-h>
-nnoremap $ $<Right>
+nnoremap <C-j> 5gj
+nnoremap <C-k> 5gk
+vnoremap <C-j> 5gj
+vnoremap <C-k> 5gk
+"noremap! <C-?> <C-h>
 
 inoremap jj <Esc>
-
-" Tab Control
-nnoremap sl gt
-nnoremap sh gT
-nnoremap sn1 :tabn1<Enter>
-nnoremap sn2 :tabn2<Enter>
-nnoremap sn3 :tabn3<Enter>
-nnoremap sn4 :tabn4<Enter>
-nnoremap sn5 :tabn5<Enter>
-nnoremap sn6 :tabn6<Enter>
-nnoremap sn7 :tabn7<Enter>
-nnoremap sn8 :tabn8<Enter>
-nnoremap sn9 :tabn9<Enter>
 
 " brackets 
 inoremap {<Enter> {<Enter>}<Esc>O
@@ -118,6 +108,8 @@ Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの�
 Plugin 'https://github.com/jistr/vim-nerdtree-tabs'				" nerdtreeのtabごとの同期
 " Plugin 'https://github.com/scrooloose/nerdcommenter'			" コメントアウトの簡易化
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
+Plugin 'https://github.com/easymotion/vim-easymotion.git'		" カーソル移動補助
+
 " Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
 " Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
@@ -141,12 +133,12 @@ filetype plugin indent on
 
 " NERDTree Setting
 nnoremap <C-e> :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 let g:NERDTreeShowBookmarks = 1
 
 " NERDTree Tabs
-map <C-n> <plug>NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup=1
+" map <C-n> <plug>NERDTreeTabsToggle<CR>
+" let g:nerdtree_tabs_open_on_console_startup=1
 
 " NERDCommenter Setting
 " filetype on
@@ -155,11 +147,28 @@ let g:nerdtree_tabs_open_on_console_startup=1
 " CtrlP Setting
 let g:ctrlp_match_window = 'max:30'
 
+" easy-motion setting
+" <Leader>f{char} to move to {char}
+map  <Space>f <Plug>(easymotion-bd-f)
+nmap <Space>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap <Space>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Space>L <Plug>(easymotion-bd-jk)
+nmap <Space>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Space>w <Plug>(easymotion-bd-w)
+nmap <Space>w <Plug>(easymotion-overwin-w)
+
 " vim-airline
 let g:airline_theme = 'luna'
 
 " ctrlP
 set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png,*/cakephp/lib/*
+let g:ctrlp_show_hidden = 1
 
 " ColorScheme Setting
 syntax on
