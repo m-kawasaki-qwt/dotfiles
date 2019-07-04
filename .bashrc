@@ -12,7 +12,7 @@ fi
 
 umask 0002
 
-" linux 
+# linux
 alias l='ls -l'
 alias la='ls -la'
 alias ls='ls -ls'
@@ -25,6 +25,7 @@ alias ga='git add .'
 alias gm='git commit -m '
 alias gs='git status'
 alias gd='git diff'
+alias gdh='git diff HEAD'
 alias gh='git checkout'
 alias gb='git branch'
 alias gaddw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero;git checkout .'
