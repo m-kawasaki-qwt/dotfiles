@@ -36,6 +36,7 @@ set noexpandtab
 
 set tabstop=4
 set showmatch
+set backspace=2
 
 " Invisible Character Visible
 set list
@@ -132,7 +133,7 @@ filetype plugin indent on
 " ------------------------------------------
 
 " NERDTree Setting
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <Space>e :NERDTreeToggle<CR>
 " autocmd vimenter * NERDTree
 let g:NERDTreeShowBookmarks = 1
 
@@ -146,6 +147,10 @@ let g:NERDTreeShowBookmarks = 1
 
 " CtrlP Setting
 let g:ctrlp_match_window = 'max:30'
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png,*/cakephp/lib/*
+let g:ctrlp_show_hidden = 1
 
 " easy-motion setting
 " <Leader>f{char} to move to {char}
@@ -165,10 +170,6 @@ nmap <Space>w <Plug>(easymotion-overwin-w)
 
 " vim-airline
 let g:airline_theme = 'luna'
-
-" ctrlP
-set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png,*/cakephp/lib/*
-let g:ctrlp_show_hidden = 1
 
 " ColorScheme Setting
 syntax on
