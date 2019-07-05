@@ -12,7 +12,7 @@ fi
 
 umask 0002
 
-nux 
+# linux 
 alias l='ls -l --color'
 alias la='ls -la --color'
 alias ls='ls -ls --color'
