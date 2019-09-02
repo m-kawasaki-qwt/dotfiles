@@ -1,12 +1,20 @@
-" ------------------------------------------------------------------------
-"          _
-"   __   _(_)_ __ ___  _ __ ___
-"   \ \ / / | '_ ` _ \| '__/ __|
-"    \ V /| | | | | | | | | (__
-"     \_/ |_|_| |_| |_|_|  \___|
-"
-" ------------------------------------------------------------------------ 
+"+------------------------------------------------------------------------
+"|          _
+"|   __   _(_)_ __ ___  _ __ ___
+"|   \ \ / / | '_ ` _ \| '__/ __|
+"|    \ V /| | | | | | | | | (__
+"|     \_/ |_|_| |_| |_|_|  \___|
+"|
+"+------------------------------------------------------------------------ 
 
+"+------------------------------------------------------------------------
+"| キーマップ確認
+"| :map " すべて確認
+"| :imap " インサートモードだけ
+"| :nmap " ノーマルモードだけ
+"| :vmap " ヴィジュアルモードだけ
+"| :verbose nmap " 定義元ファイル情報も表示
+"+------------------------------------------------------------------------
 
 " Character Code
 set encoding=utf-8
@@ -66,15 +74,42 @@ vnoremap j gj
 vnoremap k gk
 nnoremap <C-j> 5gj
 nnoremap <C-k> 5gk
-nnoremap <C-h> 8h
-nnoremap <C-l> 8l
+nnoremap <C-h> 10h
+nnoremap <C-l> 10l
 vnoremap <C-j> 5gj
 vnoremap <C-k> 5gk
-nnoremap <C-h> 8h
-nnoremap <C-l> 8l
+vnoremap <C-h> 10h
+vnoremap <C-l> 10l
 "noremap! <C-?> <C-h>
 
 inoremap jj <Esc>
+
+" window control
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+nnoremap sr <C-w>r
+nnoremap s= <C-w>=
+nnoremap sw <C-w>w
+nnoremap sW <C-w>W
+nnoremap so <C-w>=
+nnoremap sO <C-w>_<C-w>|
+
+nnoremap SJ 10<C-w>+
+nnoremap SK 10<C-w>-
+nnoremap SH 5<C-w><
+nnoremap SL 5<C-w>>
+
+" tab control
+nnoremap tn :<C-u>tabnew<CR>
+nnoremap tl gt
+nnoremap th gT
 
 " brackets 
 inoremap {<Enter> {<Enter>}<Esc>O
@@ -115,11 +150,15 @@ Plugin 'https://github.com/jistr/vim-nerdtree-tabs'				" nerdtreeのtabごとの
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
 Plugin 'https://github.com/easymotion/vim-easymotion.git'		" カーソル移動補助
 
+" Language Plugin
+" Plugin 'https://github.com/lvht/phpcd.vim'						" PHP Syntax
 " Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
 " Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
-Plugin 'https://github.com/pangloss/vim-javascript'				" JavaScript Syntax
-Plugin 'https://github.com/StanAngeloff/php.vim'				" PHP Syntax
+" Plugin 'https://github.com/pangloss/vim-javascript'				" JavaScript Syntax
+" Plugin 'https://github.com/StanAngeloff/php.vim'				" PHP Syntax
+
+
 " Views Plugins
 Plugin 'https://github.com/vim-airline/vim-airline'				" ステータスライン装飾
 Plugin 'https://github.com/vim-airline/vim-airline-themes'		" airlineのテーマ
