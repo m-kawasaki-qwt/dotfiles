@@ -82,7 +82,7 @@ vnoremap <C-h> 10h
 vnoremap <C-l> 10l
 "noremap! <C-?> <C-h>
 
-inoremap jj <Esc>
+inoremap jj <Esc>:w<CR>
 
 " window control
 nnoremap s <Nop>
